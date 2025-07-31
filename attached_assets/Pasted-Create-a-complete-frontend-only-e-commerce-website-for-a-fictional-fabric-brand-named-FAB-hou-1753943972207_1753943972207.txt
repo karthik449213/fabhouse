@@ -1,0 +1,68 @@
+Create a complete **frontend-only** e-commerce website for a fictional fabric brand named **"FAB house"** using **HTML, CSS, and JavaScript only** (no frameworks like React or Vue).
+
+🎯 **Main Goals:**
+- A **premium, professional, clean** international-style UI
+- Red and white **gradient theme**
+- **Responsive** design (desktop + mobile)
+- Include **smooth animations & transitions** (on hover, scroll, cart updates, etc.)
+- Entire site should **feel real and functional**, though no backend is needed
+
+📄 **Pages / Sections to Include:**
+1. **Homepage**
+   - Hero banner with fabric visuals
+   - Featured categories or collections
+   - "Why Choose FAB house" section
+   - Testimonials or fabric highlights
+   - Footer with basic links and social media icons
+
+2. **Product Listing Page (Shop Page)**
+   - Grid layout of products with images, names, prices
+   - Filters (category, color, etc.) – UI only
+   - Search bar (non-functional placeholder)
+
+3. **Product Detail Page**
+   - Large product image gallery
+   - Description, price, color/size selectors
+   - "Add to Cart" button with animation
+   - Delivery info, tags, etc.
+
+4. **Cart Page**
+   - List of products added
+   - Quantity adjustment
+   - Total price calculation (JS)
+   - "Proceed to Checkout" button
+
+5. **Checkout Page**
+   - Form for name, shipping address, contact
+   - Order summary
+   - "Place Order" button (mock action)
+
+📦 **Functional JS Requirements:**
+- Add to Cart, Remove from Cart
+- Quantity increase/decrease with live total update
+- Basic cart state stored in browser memory (no backend)
+- Transition from cart to checkout page
+- Alert or modal confirmation on checkout
+
+🎨 **Design Style:**
+- Main colors: **Red gradients + White** (use radial or linear gradients)
+- Fonts: Modern, sans-serif (use Google Fonts like Poppins or Lato)
+- Animations:
+   - Smooth scroll animations (AOS.js or CSS keyframes)
+   - Hover scaling, fading, transitions
+   - Slide in cart drawer or modal if desired
+
+📁 **File Structure:**
+- `index.html` (Homepage)
+- `shop.html` (Product listing)
+- `product.html` (Single product)
+- `cart.html` (Cart)
+- `checkout.html` (Checkout form)
+- `/css/style.css` (all styles)
+- `/js/main.js` (all scripts)
+- `/assets/` for images and icons (use Unsplash, etc.)
+
+⚠️ **Note:**
+- This is a **frontend-only** prototype
+- No real payments or chatbot integration needed
+- Focus on high visual polish and user-friendly flow
