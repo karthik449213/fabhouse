@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FAB house</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">FAB house</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Progress -->
+    <section class="checkout-progress">
+        <div class="container">
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <span>Cart</span>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <span>Checkout</span>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <span>Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-content">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form" data-aos="fade-right">
+                    <form id="checkout-form">
+                        <!-- Customer Information -->
+                        <div class="form-section">
+                            <h3>Customer Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3>Shipping Address</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="address">Address *</label>
+                                    <input type="text" id="address" name="address" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="apartment">Apartment, suite, etc.</label>
+                                    <input type="text" id="apartment" name="apartment">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State *</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="CA">California</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="NY">New York</option>
+                                        <option value="TX">Texas</option>
+                                        <!-- Add more states as needed -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipCode">ZIP Code *</label>
+                                    <input type="text" id="zipCode" name="zipCode" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Method -->
+                        <div class="form-section">
+                            <h3>Shipping Method</h3>
+                            <div class="shipping-options">
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="standard" checked>
+                                    <div class="option-content">
+                                        <div class="option-info">
+                                            <strong>Standard Shipping</strong>
+                                            <span>5-7 business days</span>
+                                        </div>
+                                        <div class="option-price">Free</div>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="express">
+                                    <div class="option-content">
+                                        <div class="option-info">
+                                            <strong>Express Shipping</strong>
+                                            <span>2-3 business days</span>
+                                        </div>
+                                        <div class="option-price">$15.00</div>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="overnight">
+                                    <div class="option-content">
+                                        <div class="option-info">
+                                            <strong>Overnight Shipping</strong>
+                                            <span>1 business day</span>
+                                        </div>
+                                        <div class="option-price">$35.00</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="form-section">
+                            <h3>Payment Information</h3>
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="method-content">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <div class="method-content">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="card-details" id="card-details">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardName">Name on Card *</label>
+                                        <input type="text" id="cardName" name="cardName">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div class="form-section">
+                            <h3>Special Instructions</h3>
+                            <div class="form-group">
+                                <label for="instructions">Order Notes (Optional)</label>
+                                <textarea id="instructions" name="instructions" rows="4" placeholder="Any special instructions for your order..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary" data-aos="fade-left">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="order-items" id="checkout-items">
+                            <!-- Items will be loaded here -->
+                        </div>
+
+                        <div class="summary-calculations">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="checkout-shipping">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax:</span>
+                                <span id="checkout-tax">$0.00</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="checkout-total">$0.00</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" form="checkout-form" class="btn btn-primary place-order-btn">
+                            <i class="fas fa-lock"></i>
+                            Place Order
+                        </button>
+
+                        <div class="security-note">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your payment information is secure and encrypted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FAB house</h3>
+                    <p>Your trusted partner for premium fabrics and exceptional quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=silk">Silk</a></li>
+                        <li><a href="shop.html?category=cotton">Cotton</a></li>
+                        <li><a href="shop.html?category=wool">Wool</a></li>
+                        <li><a href="shop.html?category=linen">Linen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FAB house. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your order! We'll send you a confirmation email with tracking information shortly.</p>
+                <div class="order-details">
+                    <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+                    <p><strong>Total:</strong> <span id="order-total"></span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeOrderModal()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

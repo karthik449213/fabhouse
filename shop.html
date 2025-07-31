@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - FAB house</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">FAB house</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Header -->
+    <section class="shop-header">
+        <div class="container">
+            <div class="shop-title" data-aos="fade-up">
+                <h1>Shop Premium Fabrics</h1>
+                <p>Discover our extensive collection of luxury fabrics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-content">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="shop-filters" data-aos="fade-right">
+                    <div class="filter-section">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search fabrics...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="all" checked>
+                                <span>All Fabrics</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="silk">
+                                <span>Silk</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="cotton">
+                                <span>Cotton</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="wool">
+                                <span>Wool</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="linen">
+                                <span>Linen</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Colors</h3>
+                        <div class="color-filters">
+                            <button class="color-filter" data-color="red" style="background: #dc2626;"></button>
+                            <button class="color-filter" data-color="blue" style="background: #2563eb;"></button>
+                            <button class="color-filter" data-color="green" style="background: #16a34a;"></button>
+                            <button class="color-filter" data-color="yellow" style="background: #ca8a04;"></button>
+                            <button class="color-filter" data-color="purple" style="background: #9333ea;"></button>
+                            <button class="color-filter" data-color="black" style="background: #000;"></button>
+                            <button class="color-filter" data-color="white" style="background: #fff; border: 1px solid #ccc;"></button>
+                            <button class="color-filter" data-color="gray" style="background: #6b7280;"></button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="price-range">
+                            <input type="range" id="price-range" min="0" max="200" value="200">
+                            <div class="price-display">$0 - $<span id="price-value">200</span></div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="shop-products">
+                    <div class="products-header">
+                        <div class="products-count">
+                            <span id="products-count">Showing all products</span>
+                        </div>
+                        <div class="sort-options">
+                            <select id="sort-select">
+                                <option value="default">Sort by</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name: A to Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be dynamically loaded here -->
+                    </div>
+
+                    <div class="load-more">
+                        <button class="btn btn-outline" id="load-more-btn">Load More Products</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FAB house</h3>
+                    <p>Your trusted partner for premium fabrics and exceptional quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=silk">Silk</a></li>
+                        <li><a href="shop.html?category=cotton">Cotton</a></li>
+                        <li><a href="shop.html?category=wool">Wool</a></li>
+                        <li><a href="shop.html?category=linen">Linen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FAB house. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
